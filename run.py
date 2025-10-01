@@ -24,14 +24,13 @@ class MemoManager:
 
     def write(self, text):
         today = str(datetime.datetime.now().strftime("%Y%m%d"))
-
+        """"今日のメモがまだない場合空リスト"""
         if today not in self.memo:
             self.memo[today] = []
         
         self.memo[today].append(text)
-
         self._save_log()
-        print("メモを保存しました")
+        print("メモを保存しました !")
 
     def read(self, read_mode):
         if not self.memo:
@@ -50,13 +49,24 @@ class MemoManager:
             print(latest_date)
             for idx,val in enumerate(self.memo[str(latest_date)]):
                 print(f"({idx}) {val}")
+
     def edit(self, date, idx, text):
-        print(f"{date},{idx},{text}")
+        try:
+            self.memo[date][int(idx)] = text
+            self._save_log()
+            print("メモを保存しました !")
+            
+        except:
+            print("not found")
 
     def delete(self, date, idx):
-        print(self.memo[date][int(idx)])
+        try:
+            del self.memo[date][int(idx)]
+            self._save_log()
+            print("メモを削除しました !")
+        except:
+            print("not found")
         
-
     def explanation(self):
         print("""
     -w: inputされた内容を日付で保存
@@ -76,6 +86,7 @@ if __name__ == '__main__':
     else:
         argument = ""
 
+    """引数でモード設定"""
     if argument == '-w':
         new_memo = input("新しいメモ作成: ")
         manager.write(new_memo)

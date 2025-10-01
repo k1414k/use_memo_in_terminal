@@ -1,18 +1,15 @@
 {
   "20250930": [
     "pythonでobject[key]についかしたいときappend()関数使用",
-    "\"今日はいい天気、オークハウス\"mail\"送る）”",
-    "qq",
-    "sadasd",
-    "git branch -d mainでmainブランチ削除(local環境の）, git checkout branch名de",
+    "git branch -d ブランチ名でローカルブランチ削除、git checkout branch名",
     "gitのデフォルトリポジトリ変更cli命令はgh repo edit k1414k/use_memo_in_terminal --default-branch master"
   ],
   "20251001": [
-    "ひ",
-    "ddd",
-    "q",
-    "NEWMEMO",
-    "asdasdsdda",
-    "pyrtho勉強"
+    "for idx, val in enumerate(配列)",
+    "pythonでリスト（配列）を削除する時インデックスで消すにはdel arr[idx], 内容で消すにはarr.remove(val)",
+    "python::arr.clear()",
+    "小松菜奈",
+    "716",
+    "宅配ボックス：７１７７"
   ]
 }
